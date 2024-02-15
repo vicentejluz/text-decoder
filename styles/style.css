@@ -1,0 +1,232 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap");
+
+:root {
+  --cor-primaria: #0a3871;
+  --cor-secundaria: #495057;
+  --cor-terciaria: #343a40;
+  --fonte-primaria: "Inter", sans-serif;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  background-color: #f3f5fc;
+}
+
+body {
+  box-sizing: border-box;
+}
+
+.cabecalho {
+  width: 120px;
+  height: 48px;
+  padding: 3% 0% 0% 3%;
+}
+
+/* ver aqui */
+.apresentacao {
+  padding: 3% 15%;
+  display: flex;
+  justify-content: space-between;
+  gap: 24px;
+}
+
+/* ver aqui */
+.apresentacao__criptografia_descriptografia {
+  display: flex;
+  flex-direction: column;
+  height: 540px;
+}
+
+/* ver aqui */
+.apresentacao__criptografia_descriptografia__textarea {
+  padding: 1% 1% 1% 1%;
+  font-family: var(--fonte-primaria);
+  font-weight: 400;
+  font-size: 2rem;
+  color: var(--cor-primaria);
+  width: 680px;
+  height: 415px;
+  resize: none;
+  margin-bottom: 2%;
+  border: 1px solid rgba(0, 0, 0, 0.288);
+  border-radius: 10px;
+}
+
+.apresentacao__criptografia_descriptografia__textarea::placeholder {
+  font-family: var(--fonte-primaria);
+  font-weight: 400;
+  font-size: 2rem;
+  color: var(--cor-primaria);
+}
+
+.apresentacao__criptografia_descriptografia__atencao {
+  text-align: center;
+  display: flex;
+  gap: 8px;
+}
+
+.apresentacao__criptografia_descriptografia__atencao__imagem__exclamacao {
+  width: 16px;
+  height: 16px;
+}
+
+.apresentacao__criptografia_descriptografia__atencao__paragrafo {
+  font-family: var(--fonte-primaria);
+  font-weight: 400;
+  font-size: 0.75rem;
+  color: var(--cor-secundaria);
+  opacity: 80%;
+}
+
+.apresentacao__criptografia_descriptografia__botao {
+  padding-top: 2%;
+  display: flex;
+  gap: 40px;
+}
+
+/* ver aqui */
+.apresentacao__criptografia_descriptografia__botao__criptografia {
+  background-color: var(--cor-primaria);
+  font-family: var(--fonte-primaria);
+  font-size: 1rem;
+  font-weight: 400;
+  color: #ffffff;
+  border-radius: 24px;
+  border: 0;
+  padding: 24px;
+  width: 328px;
+  cursor: pointer;
+}
+
+.apresentacao__criptografia_descriptografia__botao__criptografia:hover {
+  background-color: #072b61;
+}
+
+/* ver aqui */
+.apresentacao__criptografia_descriptografia__botao__descriptografia {
+  background-color: #d8dfe8;
+  font-family: var(--fonte-primaria);
+  font-size: 1rem;
+  font-weight: 400;
+  border: 1px solid var(--cor-primaria);
+  border-radius: 24px;
+  padding: 24px;
+  width: 328px;
+  cursor: pointer;
+  color: var(--cor-primaria);
+}
+
+.apresentacao__criptografia_descriptografia__botao__descriptografia:hover {
+  background-color: #eff1fa;
+}
+
+/* ver aqui */
+.apresentacao__resultado {
+  display: flex;
+  flex-direction: column;
+  width: 400px;
+  height: 540px;
+  text-align: center;
+}
+
+.apresentacao__resultado__saida {
+  height: 100%;
+}
+
+.apresentacao__resultado__saida__output {
+  display: none;
+  padding: 1% 1% 1% 1%;
+  font-family: var(--fonte-primaria);
+  font-weight: 400;
+  font-size: 1.5rem;
+  color: #495057;
+  height: 415px;
+  border: 1px solid rgba(0, 0, 0, 0.288);
+  border-radius: 10px;
+  text-align: start;
+  overflow-wrap: break-word;
+  overflow-y: auto;
+}
+
+/* ver aqui */
+.apresentacao__resultado__saida__mensagem__imagem_lupa {
+  width: 336px;
+  height: 304px;
+}
+
+/* ver aqui */
+.apresentacao__resultado__saida__mensagem__paragrafo__nenhuma_mensagem {
+  font-family: var(--fonte-primaria);
+  font-weight: 700;
+  font-size: 1.5rem;
+  color: var(--cor-terciaria);
+  margin-bottom: 4%;
+}
+
+/* ver aqui */
+.apresentacao__resultado__saida__mensagem__paragrafo__digite_texto {
+  font-family: var(--fonte-primaria);
+  font-weight: 400;
+  font-size: 1rem;
+  color: var(--cor-secundaria);
+}
+
+.apresentacao__resultado__botao {
+  display: flex;
+  gap: 16px;
+}
+
+.apresentacao__resultado__botao__copiar {
+  display: none;
+  background-color: #d8dfe8;
+  font-family: var(--fonte-primaria);
+  font-size: 1rem;
+  font-weight: 400;
+  border: 1px solid var(--cor-primaria);
+  border-radius: 24px;
+  padding: 24px;
+  width: 328px;
+  cursor: pointer;
+  color: var(--cor-primaria);
+}
+
+.apresentacao__resultado__botao__copiar:hover {
+  background-color: #eff1fa;
+}
+
+.apresentacao__resultado__botao__limpar {
+  display: none;
+  background-color: var(--cor-primaria);
+  font-family: var(--fonte-primaria);
+  font-size: 1rem;
+  font-weight: 400;
+  color: #ffffff;
+  border-radius: 24px;
+  border: 0;
+  padding: 24px;
+  width: 328px;
+  cursor: pointer;
+}
+
+.apresentacao__resultado__botao__limpar:hover {
+  background-color: #072b61;
+}
+
+.rodape {
+  padding-bottom: 2vh;
+  color: var(--cor-primaria);
+  text-align: center;
+  font-family: var(--font-secundaria);
+  font-size: 1.3rem;
+  font-weight: 400;
+}
+
+.rodape__link {
+  text-decoration: none;
+  color: currentColor;
+}
+
+.rodape__link:hover {
+  color: #4b0082;
+}

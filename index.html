@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./styles/style.css" />
+    <title>Decodificador de texto</title>
+  </head>
+  <body>
+    <header class="cabecalho">
+      <img
+        class="cabecalho_imagem"
+        src="assets/logo.png"
+        alt="Um letra A representando o logo da alura"
+      />
+    </header>
+    <main class="apresentacao">
+      <section class="apresentacao__criptografia_descriptografia">
+        <textarea
+          class="apresentacao__criptografia_descriptografia__textarea"
+          placeholder="Digite seu texto"
+          autofocus
+          oninvalid="campoVazio()"
+        ></textarea>
+        <div class="apresentacao__criptografia_descriptografia__atencao">
+          <img
+            class="apresentacao__criptografia_descriptografia__atencao__imagem__exclamacao"
+            src="assets/exclamação.png"
+            alt="Uma exclamação"
+          />
+          <p
+            class="apresentacao__criptografia_descriptografia__atencao__paragrafo"
+          >
+            Apenas letras minúsculas e sem acento.
+          </p>
+        </div>
+        <div class="apresentacao__criptografia_descriptografia__botao">
+          <button
+            onclick="criptografia()"
+            class="apresentacao__criptografia_descriptografia__botao__criptografia"
+          >
+            Criptografia
+          </button>
+          <button
+            onclick="descriptografia()"
+            class="apresentacao__criptografia_descriptografia__botao__descriptografia"
+          >
+            Descriptografia
+          </button>
+        </div>
+      </section>
+      <section class="apresentacao__resultado">
+        <div class="apresentacao__resultado__saida">
+          <output class="apresentacao__resultado__saida__output"></output>
+          <div class="apresentacao__resultado__saida__mensagem">
+            <img
+              class="apresentacao__resultado__saida__mensagem__imagem_lupa"
+              src="assets/lupa.png"
+              alt="Uma pessoa segurando uma lupa olhando um diamante"
+            />
+            <p
+              class="apresentacao__resultado__saida__mensagem__paragrafo__nenhuma_mensagem"
+            >
+              Nenhuma mensagem encontrada
+            </p>
+            <p
+              class="apresentacao__resultado__saida__mensagem__paragrafo__digite_texto"
+            >
+              Digite um texto que você deseja criptografar ou descriptografar.
+            </p>
+          </div>
+        </div>
+        <div class="apresentacao__resultado__botao">
+          <button
+            onclick="copiarTexto()"
+            class="apresentacao__resultado__botao__copiar"
+          >
+            Copiar
+          </button>
+          <button
+            onclick="limpar()"
+            class="apresentacao__resultado__botao__limpar"
+          >
+            Limpar
+          </button>
+        </div>
+      </section>
+    </main>
+    <footer class="rodape">
+      <p>
+        Desenvolvido por
+        <a
+          class="rodape__link"
+          href="https://github.com/vicentejluz"
+          target="_blank"
+          ><strong>Vicente Luz</strong></a
+        >
+        © 2024
+      </p>
+    </footer>
+    <script src="src/app.js" defer></script>
+  </body>
+</html>
