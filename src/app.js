@@ -29,85 +29,79 @@ function descriptografia() {
   processarTexto(descriptografarTexto);
 }
 
-function criptografarTexto(valueTextarea) {
+function criptografarTexto(valorTextArea) {
   let novoTexto = "";
 
-  if (valueTextarea === "") return 0;
-  for (let i = 0; i < valueTextarea.length; i++) {
+  if (valorTextArea === "") return "Por favor, preencha este campo!";
+  for (let i = 0; i < valorTextArea.length; i++) {
     if (
-      (valueTextarea.charAt(i) >= "à" && valueTextarea.charAt(i) <= "ÿ") ||
-      (valueTextarea.charAt(i) >= "A" && valueTextarea.charAt(i) <= "Z")
+      (valorTextArea.charAt(i) >= "à" && valorTextArea.charAt(i) <= "ÿ") ||
+      (valorTextArea.charAt(i) >= "A" && valorTextArea.charAt(i) <= "Z")
     )
-      return -1;
-    if (valueTextarea.charAt(i) == "e") novoTexto += "enter";
-    else if (valueTextarea.charAt(i) == "i") novoTexto += "imes";
-    else if (valueTextarea.charAt(i) === "a") novoTexto += "ai";
-    else if (valueTextarea.charAt(i) === "o") novoTexto += "ober";
-    else if (valueTextarea.charAt(i) === "u") novoTexto += "ufat";
-    else novoTexto += valueTextarea.charAt(i);
+      return "Apenas letras minúsculas e sem acento!";
+    if (valorTextArea.charAt(i) == "e") novoTexto += "enter";
+    else if (valorTextArea.charAt(i) == "i") novoTexto += "imes";
+    else if (valorTextArea.charAt(i) === "a") novoTexto += "ai";
+    else if (valorTextArea.charAt(i) === "o") novoTexto += "ober";
+    else if (valorTextArea.charAt(i) === "u") novoTexto += "ufat";
+    else novoTexto += valorTextArea.charAt(i);
   }
   return novoTexto;
 }
 
-function descriptografarTexto(valueTextarea) {
+function descriptografarTexto(valorTextArea) {
   let novoTexto = "";
 
-  if (valueTextarea === "") {
-    return 0;
-  } else {
-    for (let i = 0; i < valueTextarea.length; i++) {
-      if (
-        (valueTextarea.charAt(i) >= "à" && valueTextarea.charAt(i) <= "ÿ") ||
-        (valueTextarea.charAt(i) >= "A" && valueTextarea.charAt(i) <= "Z")
-      ) {
-        return -1;
-      } else {
-        // if (valueTextarea.includes("enter")) novoTexto += "e";
-        // else if (valueTextarea.includes("imes")) novoTexto += "i";
-        // else if (valueTextarea.includes("ai")) novoTexto += "a";
-        // else if (valueTextarea.includes("ober")) novoTexto += "o";
-        // else if (valueTextarea.includes("ufar")) novoTexto += "u";
-        // else novoTexto += valueTextarea.charAt(i);
-      }
-    }
-    return novoTexto;
+  if (valorTextArea === "") return "Por favor, preencha este campo!";
+  for (let i = 0; i < valorTextArea.length; i++) {
+    if (
+      (valorTextArea.charAt(i) >= "à" && valorTextArea.charAt(i) <= "ÿ") ||
+      (valorTextArea.charAt(i) >= "A" && valorTextArea.charAt(i) <= "Z")
+    )
+      return "Apenas letras minúsculas e sem acento!";
+    novoTexto = valorTextArea
+      .replace(/enter/g, "e")
+      .replace(/imes/g, "i")
+      .replace(/ai/g, "a")
+      .replace(/ober/g, "o")
+      .replace(/ufat/g, "u");
   }
+  return novoTexto;
 }
 
 function processarTexto(funcaoProcessamento) {
-  let valueTextarea = textarea.value.trim();
+  let valorTextArea = textarea.value.trim();
 
-  if (funcaoProcessamento(valueTextarea) === 0) campoVazio();
-  else if (funcaoProcessamento(valueTextarea) === -1)
-    validarMinusculaSemAcento();
+  const texto = funcaoProcessamento(valorTextArea);
+  if (texto === "Por favor, preencha este campo!") campoVazio(texto);
+  else if (texto === "Apenas letras minúsculas e sem acento!")
+    validarMinusculaSemAcento(texto);
   else {
-    output.textContent = funcaoProcessamento(valueTextarea);
+    output.textContent = texto;
     styleDisplay(block, none, block, block);
   }
 }
 
-function campoVazio() {
-  alert("Por favor, preencha este campo!");
-  textarea.value = "";
-  textarea.focus();
-  styleDisplay(none, block, none, none);
+function campoVazio(preenchaCampo) {
+  alert(preenchaCampo);
+  limpar();
 }
 
-function validarMinusculaSemAcento() {
-  alert("Apenas letras minúsculas e sem acento!");
+function validarMinusculaSemAcento(letrasMinusculasSemAcento) {
+  alert(letrasMinusculasSemAcento);
   textarea.focus();
 }
 
 async function copiarTexto() {
   if (output.value !== "" || output.value !== null) {
     await navigator.clipboard.writeText(output.value.trim());
-    alert("Texto de saída copiado com Sucesso!");
+    const copia = await navigator.clipboard.readText();
+    alert("Texto copiado com Sucesso! + " + copia);
   }
 }
 
 function limpar() {
   textarea.value = "";
-  output.value = "";
   textarea.focus();
   styleDisplay(none, block, none, none);
 }
