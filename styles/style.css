@@ -4,13 +4,21 @@
   --cor-primaria: #0a3871;
   --cor-secundaria: #495057;
   --cor-terciaria: #343a40;
+  --cor-quaternaria: #ffffff;
+  --cor-quintaria: #072b61;
+  --cor-sextaria: #d8dfe8;
+  --cor-septenaria: #eff1fa;
+  --cor-octonaria: #f3f5fc;
+  --cor-novenaria: #4b0082;
   --fonte-primaria: "Inter", sans-serif;
+  --fonte-primaria-peso-normal: 400;
+  --borda-padrao: 1px solid rgba(0, 0, 0, 0.288);
 }
 
 * {
   margin: 0;
   padding: 0;
-  background-color: #f3f5fc;
+  background-color: var(--cor-octonaria);
 }
 
 body {
@@ -42,20 +50,20 @@ body {
 .apresentacao__criptografia_descriptografia__textarea {
   padding: 1% 1% 1% 1%;
   font-family: var(--fonte-primaria);
-  font-weight: 400;
+  font-weight: var(--fonte-primaria-peso-normal);
   font-size: 2rem;
   color: var(--cor-primaria);
   width: 680px;
   height: 415px;
   resize: none;
   margin-bottom: 2%;
-  border: 1px solid rgba(0, 0, 0, 0.288);
+  border: var(--borda-padrao);
   border-radius: 10px;
 }
 
 .apresentacao__criptografia_descriptografia__textarea::placeholder {
   font-family: var(--fonte-primaria);
-  font-weight: 400;
+  font-weight: var(--fonte-primaria-peso-normal);
   font-size: 2rem;
   color: var(--cor-primaria);
 }
@@ -73,7 +81,7 @@ body {
 
 .apresentacao__criptografia_descriptografia__atencao__paragrafo {
   font-family: var(--fonte-primaria);
-  font-weight: 400;
+  font-weight: var(--fonte-primaria-peso-normal);
   font-size: 0.75rem;
   color: var(--cor-secundaria);
   opacity: 80%;
@@ -90,8 +98,8 @@ body {
   background-color: var(--cor-primaria);
   font-family: var(--fonte-primaria);
   font-size: 1rem;
-  font-weight: 400;
-  color: #ffffff;
+  font-weight: var(--fonte-primaria-peso-normal);
+  color: var(--cor-quaternaria);
   border-radius: 24px;
   border: 0;
   padding: 24px;
@@ -100,15 +108,15 @@ body {
 }
 
 .apresentacao__criptografia_descriptografia__botao__criptografia:hover {
-  background-color: #072b61;
+  background-color: var(--cor-quintaria);
 }
 
 /* ver aqui */
 .apresentacao__criptografia_descriptografia__botao__descriptografia {
-  background-color: #d8dfe8;
+  background-color: var(--cor-sextaria);
   font-family: var(--fonte-primaria);
   font-size: 1rem;
-  font-weight: 400;
+  font-weight: var(--fonte-primaria-peso-normal);
   border: 1px solid var(--cor-primaria);
   border-radius: 24px;
   padding: 24px;
@@ -118,7 +126,7 @@ body {
 }
 
 .apresentacao__criptografia_descriptografia__botao__descriptografia:hover {
-  background-color: #eff1fa;
+  background-color: var(--cor-septenaria);
 }
 
 /* ver aqui */
@@ -138,11 +146,11 @@ body {
   display: none;
   padding: 1% 1% 1% 1%;
   font-family: var(--fonte-primaria);
-  font-weight: 400;
+  font-weight: var(--fonte-primaria-peso-normal);
   font-size: 1.5rem;
-  color: #495057;
+  color: var(--cor-terciaria);
   height: 415px;
-  border: 1px solid rgba(0, 0, 0, 0.288);
+  border: var(--borda-padrao);
   border-radius: 10px;
   text-align: start;
   overflow-wrap: break-word;
@@ -167,7 +175,7 @@ body {
 /* ver aqui */
 .apresentacao__resultado__saida__mensagem__paragrafo__digite_texto {
   font-family: var(--fonte-primaria);
-  font-weight: 400;
+  font-weight: var(--fonte-primaria-peso-normal);
   font-size: 1rem;
   color: var(--cor-secundaria);
 }
@@ -179,10 +187,10 @@ body {
 
 .apresentacao__resultado__botao__copiar {
   display: none;
-  background-color: #d8dfe8;
+  background-color: var(--cor-sextaria);
   font-family: var(--fonte-primaria);
   font-size: 1rem;
-  font-weight: 400;
+  font-weight: var(--fonte-primaria-peso-normal);
   border: 1px solid var(--cor-primaria);
   border-radius: 24px;
   padding: 24px;
@@ -192,7 +200,7 @@ body {
 }
 
 .apresentacao__resultado__botao__copiar:hover {
-  background-color: #eff1fa;
+  background-color: var(--cor-septenaria);
 }
 
 .apresentacao__resultado__botao__limpar {
@@ -200,8 +208,8 @@ body {
   background-color: var(--cor-primaria);
   font-family: var(--fonte-primaria);
   font-size: 1rem;
-  font-weight: 400;
-  color: #ffffff;
+  font-weight: var(--fonte-primaria-peso-normal);
+  color: var(--cor-quaternaria);
   border-radius: 24px;
   border: 0;
   padding: 24px;
@@ -210,7 +218,7 @@ body {
 }
 
 .apresentacao__resultado__botao__limpar:hover {
-  background-color: #072b61;
+  background-color: var(--cor-quintaria);
 }
 
 .rodape {
@@ -219,7 +227,7 @@ body {
   text-align: center;
   font-family: var(--font-secundaria);
   font-size: 1.3rem;
-  font-weight: 400;
+  font-weight: var(--fonte-primaria-peso-normal);
 }
 
 .rodape__link {
@@ -228,5 +236,5 @@ body {
 }
 
 .rodape__link:hover {
-  color: #4b0082;
+  color: var(--cor-novenaria);
 }

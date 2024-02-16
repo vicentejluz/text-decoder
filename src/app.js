@@ -59,13 +59,13 @@ function descriptografarTexto(valorTextArea) {
       (valorTextArea.charAt(i) >= "A" && valorTextArea.charAt(i) <= "Z")
     )
       return "Apenas letras minúsculas e sem acento!";
-    novoTexto = valorTextArea
-      .replace(/enter/g, "e")
-      .replace(/imes/g, "i")
-      .replace(/ai/g, "a")
-      .replace(/ober/g, "o")
-      .replace(/ufat/g, "u");
   }
+  novoTexto = valorTextArea
+    .replace(/enter/g, "e")
+    .replace(/imes/g, "i")
+    .replace(/ai/g, "a")
+    .replace(/ober/g, "o")
+    .replace(/ufat/g, "u");
   return novoTexto;
 }
 
