@@ -13,6 +13,7 @@
   --fonte-primaria: "Inter", sans-serif;
   --fonte-primaria-peso-normal: 400;
   --borda-padrao: 1px solid rgba(0, 0, 0, 0.288);
+  --width-botao: 24vw;
 }
 
 * {
@@ -96,7 +97,7 @@
   border-radius: 24px;
   border: 0;
   padding: 24px;
-  width: 24vw;
+  width: var(--width-botao);
   cursor: pointer;
 }
 
@@ -112,7 +113,7 @@
   border: 1px solid var(--cor-primaria);
   border-radius: 24px;
   padding: 24px;
-  width: 24vw;
+  width: var(--width-botao);
   cursor: pointer;
   color: var(--cor-primaria);
 }
@@ -151,7 +152,6 @@
 .apresentacao__resultado__saida__mensagem__imagem_lupa {
   width: 336px;
   height: 304px;
-  margin-bottom: 24px; /* Espaçamento entre a imagem e o parágrafo */
 }
 
 .apresentacao__resultado__saida__mensagem__paragrafo__nenhuma_mensagem {
@@ -159,7 +159,7 @@
   font-weight: 700;
   font-size: 1.5rem;
   color: var(--cor-terciaria);
-  margin-bottom: 24px; /* Espaçamento entre a imagem e o parágrafo */
+  margin-bottom: 24px;
 }
 
 .apresentacao__resultado__saida__mensagem__paragrafo__digite_texto {
@@ -183,7 +183,7 @@
   border: 1px solid var(--cor-primaria);
   border-radius: 24px;
   padding: 24px;
-  width: 24vw;
+  width: var(--width-botao);
   cursor: pointer;
   color: var(--cor-primaria);
 }
@@ -202,7 +202,7 @@
   border-radius: 24px;
   border: 0;
   padding: 24px;
-  width: 24vw;
+  width: var(--width-botao);
   cursor: pointer;
 }
 
@@ -257,6 +257,7 @@
 
 @media (max-width: 768px) {
   .cabecalho {
+    padding-left: 0;
     margin: auto;
   }
 

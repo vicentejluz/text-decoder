@@ -35,8 +35,9 @@ function criptografarTexto(valorTextArea) {
   if (valorTextArea === "") return "Por favor, preencha este campo!";
   for (let i = 0; i < valorTextArea.length; i++) {
     if (
-      (valorTextArea.charAt(i) >= "à" && valorTextArea.charAt(i) <= "ÿ") ||
-      (valorTextArea.charAt(i) >= "A" && valorTextArea.charAt(i) <= "Z")
+      !(valorTextArea.charAt(i) >= "a" && valorTextArea.charAt(i) <= "z") &&
+      valorTextArea.charAt(i) !== "!" &&
+      valorTextArea.charAt(i) !== " "
     )
       return "Apenas letras minúsculas e sem acento!";
     if (valorTextArea.charAt(i) == "e") novoTexto += "enter";
@@ -54,8 +55,9 @@ function descriptografarTexto(valorTextArea) {
   if (valorTextArea === "") return "Por favor, preencha este campo!";
   for (let i = 0; i < valorTextArea.length; i++) {
     if (
-      (valorTextArea.charAt(i) >= "à" && valorTextArea.charAt(i) <= "ÿ") ||
-      (valorTextArea.charAt(i) >= "A" && valorTextArea.charAt(i) <= "Z")
+      !(valorTextArea.charAt(i) >= "a" && valorTextArea.charAt(i) <= "z") &&
+      valorTextArea.charAt(i) !== "!" &&
+      valorTextArea.charAt(i) !== " "
     )
       return "Apenas letras minúsculas e sem acento!";
   }
