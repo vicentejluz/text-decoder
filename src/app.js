@@ -46,12 +46,11 @@ function criptografarTexto(valorTextArea) {
     else if (valorTextArea.charAt(i) === "u") novoTexto += "ufat";
     else novoTexto += valorTextArea.charAt(i);
   }
+
   return novoTexto;
 }
 
 function descriptografarTexto(valorTextArea) {
-  let novoTexto = "";
-
   if (valorTextArea === "") return "Por favor, preencha este campo!";
   for (let i = 0; i < valorTextArea.length; i++) {
     if (
@@ -60,19 +59,19 @@ function descriptografarTexto(valorTextArea) {
     )
       return "Apenas letras minúsculas e sem acento!";
   }
-  novoTexto = valorTextArea
+  const novoTexto = valorTextArea
     .replace(/enter/g, "e")
     .replace(/imes/g, "i")
     .replace(/ai/g, "a")
     .replace(/ober/g, "o")
     .replace(/ufat/g, "u");
+
   return novoTexto;
 }
 
 function processarTexto(funcaoProcessamento) {
-  let valorTextArea = textarea.value.trim();
+  const texto = funcaoProcessamento(textarea.value.trim());
 
-  const texto = funcaoProcessamento(valorTextArea);
   if (texto === "Por favor, preencha este campo!") campoVazio(texto);
   else if (texto === "Apenas letras minúsculas e sem acento!")
     validarMinusculaSemAcento(texto);

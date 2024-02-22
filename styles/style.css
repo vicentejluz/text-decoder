@@ -19,9 +19,6 @@
   margin: 0;
   padding: 0;
   background-color: var(--cor-octonaria);
-}
-
-body {
   box-sizing: border-box;
 }
 
@@ -31,32 +28,29 @@ body {
   padding: 3% 0% 0% 3%;
 }
 
-/* ver aqui */
 .apresentacao {
-  padding: 3% 15%;
+  padding: 5% 15%;
   display: flex;
   justify-content: space-between;
   gap: 24px;
 }
 
-/* ver aqui */
 .apresentacao__criptografia_descriptografia {
   display: flex;
   flex-direction: column;
-  height: 540px;
+  width: 49.7vw;
 }
 
-/* ver aqui */
 .apresentacao__criptografia_descriptografia__textarea {
   padding: 1% 1% 1% 1%;
   font-family: var(--fonte-primaria);
   font-weight: var(--fonte-primaria-peso-normal);
   font-size: 2rem;
   color: var(--cor-primaria);
-  width: 680px;
-  height: 415px;
+  width: 100%;
+  height: 450px;
   resize: none;
-  margin-bottom: 2%;
+  margin-bottom: 8px;
   border: var(--borda-padrao);
   border-radius: 10px;
 }
@@ -88,12 +82,11 @@ body {
 }
 
 .apresentacao__criptografia_descriptografia__botao {
-  padding-top: 2%;
+  padding-top: 8px;
   display: flex;
   gap: 40px;
 }
 
-/* ver aqui */
 .apresentacao__criptografia_descriptografia__botao__criptografia {
   background-color: var(--cor-primaria);
   font-family: var(--fonte-primaria);
@@ -103,7 +96,7 @@ body {
   border-radius: 24px;
   border: 0;
   padding: 24px;
-  width: 328px;
+  width: 24vw;
   cursor: pointer;
 }
 
@@ -111,7 +104,6 @@ body {
   background-color: var(--cor-quintaria);
 }
 
-/* ver aqui */
 .apresentacao__criptografia_descriptografia__botao__descriptografia {
   background-color: var(--cor-sextaria);
   font-family: var(--fonte-primaria);
@@ -120,7 +112,7 @@ body {
   border: 1px solid var(--cor-primaria);
   border-radius: 24px;
   padding: 24px;
-  width: 328px;
+  width: 24vw;
   cursor: pointer;
   color: var(--cor-primaria);
 }
@@ -129,17 +121,10 @@ body {
   background-color: var(--cor-septenaria);
 }
 
-/* ver aqui */
 .apresentacao__resultado {
   display: flex;
   flex-direction: column;
-  width: 400px;
-  height: 540px;
-  text-align: center;
-}
-
-.apresentacao__resultado__saida {
-  height: 100%;
+  width: 29.28vw;
 }
 
 .apresentacao__resultado__saida__output {
@@ -149,30 +134,34 @@ body {
   font-weight: var(--fonte-primaria-peso-normal);
   font-size: 1.5rem;
   color: var(--cor-terciaria);
-  height: 415px;
+  width: 100%;
+  height: 450px;
   border: var(--borda-padrao);
   border-radius: 10px;
+  margin-bottom: 32px;
   text-align: start;
   overflow-wrap: break-word;
   overflow-y: auto;
 }
 
-/* ver aqui */
+.apresentacao__resultado__saida__mensagem {
+  text-align: center;
+}
+
 .apresentacao__resultado__saida__mensagem__imagem_lupa {
   width: 336px;
   height: 304px;
+  margin-bottom: 24px; /* Espaçamento entre a imagem e o parágrafo */
 }
 
-/* ver aqui */
 .apresentacao__resultado__saida__mensagem__paragrafo__nenhuma_mensagem {
   font-family: var(--fonte-primaria);
   font-weight: 700;
   font-size: 1.5rem;
   color: var(--cor-terciaria);
-  margin-bottom: 4%;
+  margin-bottom: 24px; /* Espaçamento entre a imagem e o parágrafo */
 }
 
-/* ver aqui */
 .apresentacao__resultado__saida__mensagem__paragrafo__digite_texto {
   font-family: var(--fonte-primaria);
   font-weight: var(--fonte-primaria-peso-normal);
@@ -194,7 +183,7 @@ body {
   border: 1px solid var(--cor-primaria);
   border-radius: 24px;
   padding: 24px;
-  width: 328px;
+  width: 24vw;
   cursor: pointer;
   color: var(--cor-primaria);
 }
@@ -213,7 +202,7 @@ body {
   border-radius: 24px;
   border: 0;
   padding: 24px;
-  width: 328px;
+  width: 24vw;
   cursor: pointer;
 }
 
@@ -224,10 +213,12 @@ body {
 .rodape {
   padding-bottom: 2vh;
   color: var(--cor-primaria);
-  text-align: center;
   font-family: var(--font-secundaria);
   font-size: 1.3rem;
   font-weight: var(--fonte-primaria-peso-normal);
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .rodape__link {
@@ -237,4 +228,118 @@ body {
 
 .rodape__link:hover {
   color: var(--cor-novenaria);
+}
+
+@media (max-width: 1035px) {
+  .apresentacao {
+    padding-left: 10%;
+    gap: 16px;
+  }
+
+  .apresentacao__resultado {
+    display: flex;
+    flex-direction: column;
+    width: 36vw;
+  }
+
+  .apresentacao__criptografia_descriptografia__botao {
+    padding-top: 8px;
+    display: flex;
+    gap: 16px;
+  }
+}
+
+@media (max-width: 900px) {
+  .apresentacao__resultado__saida__mensagem__imagem_lupa {
+    width: 280px;
+  }
+}
+
+@media (max-width: 768px) {
+  .cabecalho {
+    margin: auto;
+  }
+
+  .apresentacao {
+    padding: 5% 8%;
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+  }
+
+  .apresentacao__criptografia_descriptografia {
+    width: 100%;
+  }
+
+  .apresentacao__criptografia_descriptografia__textarea {
+    height: 288px;
+  }
+
+  .apresentacao__criptografia_descriptografia__botao__criptografia {
+    width: 100%;
+  }
+
+  .apresentacao__criptografia_descriptografia__botao__descriptografia {
+    width: 100%;
+  }
+
+  .apresentacao__resultado {
+    width: 100%;
+  }
+
+  .apresentacao__resultado__saida__output {
+    height: 288px;
+    margin-bottom: 16px;
+  }
+
+  .apresentacao__resultado__saida__mensagem__imagem_lupa {
+    display: none;
+  }
+
+  .apresentacao__resultado__saida__mensagem__paragrafo__nenhuma_mensagem {
+    margin-bottom: 8px;
+  }
+
+  .apresentacao__resultado__botao__copiar {
+    width: 100%;
+  }
+
+  .apresentacao__resultado__botao__limpar {
+    width: 100%;
+  }
+}
+
+@media (max-width: 405px) {
+  .apresentacao {
+    gap: 16px;
+  }
+
+  .apresentacao__criptografia_descriptografia__textarea {
+    padding: 2% 2% 2% 2%;
+    font-size: 1.5rem;
+    height: 300px;
+  }
+
+  .apresentacao__resultado__saida__output {
+    padding: 2% 2% 2% 2%;
+    margin-bottom: 8px;
+  }
+
+  .apresentacao__criptografia_descriptografia__textarea::placeholder {
+    font-size: 1.5rem;
+  }
+
+  .apresentacao__criptografia_descriptografia__botao {
+    flex-direction: column;
+    gap: 8px;
+  }
+
+  .apresentacao__resultado__botao {
+    flex-direction: column;
+    gap: 8px;
+  }
+
+  .rodape {
+    font-size: 1rem;
+  }
 }
