@@ -276,10 +276,7 @@
     height: 288px;
   }
 
-  .apresentacao__criptografia_descriptografia__botao__criptografia {
-    width: 100%;
-  }
-
+  .apresentacao__criptografia_descriptografia__botao__criptografia,
   .apresentacao__criptografia_descriptografia__botao__descriptografia {
     width: 100%;
   }
@@ -301,10 +298,7 @@
     margin-bottom: 8px;
   }
 
-  .apresentacao__resultado__botao__copiar {
-    width: 100%;
-  }
-
+  .apresentacao__resultado__botao__copiar,
   .apresentacao__resultado__botao__limpar {
     width: 100%;
   }
